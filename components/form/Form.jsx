@@ -24,7 +24,7 @@ export default function Form() {
         <section>
             <form onSubmit={addPostTitle}>
 
-                <input type="text" placeholder="Inserisci il titolo" value={newPosts} />
+                <input type="text" placeholder="Inserisci il titolo" className={style.placeholder} value={newPosts} />
 
                 <button className={style.formBtn} type="submit" id="button">INVIA</button>
             </form>
