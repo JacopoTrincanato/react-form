@@ -18,7 +18,7 @@ export default function Form() {
         console.log(initialPosts);
 
 
-        setInitialPosts([...initialPosts, newPosts])
+        setInitialPosts([...initialPosts, { title: newPosts }])
         setNewPosts('')
 
 
