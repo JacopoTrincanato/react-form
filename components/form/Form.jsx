@@ -7,6 +7,9 @@ import style from "./Form.module.css"
 //importo i post
 import posts from "../../data/posts";
 
+//importo le icone di fontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 //creo il componente Form
 export default function Form() {
     const [initialPosts, setInitialPosts] = useState(posts)
