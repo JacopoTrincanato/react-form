@@ -9,6 +9,10 @@ body {
   font-family: sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 header,
 footer {
   text-align: center;

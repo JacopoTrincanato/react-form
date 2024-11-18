@@ -28,6 +28,11 @@ export default function Form() {
 
                 <button className={style.formBtn} type="submit" id="button">INVIA</button>
             </form>
+
+            <ul>
+                {initialPosts.map((post, index) => <li key={index}>{post.title}</li>)}
+
+            </ul>
         </section>
     )
 }
