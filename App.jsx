@@ -1,9 +1,9 @@
 import './App.css'
 
 //importo i componenti
-import AppHeader from './components/AppHeader'
-import AppMain from './components/AppMain'
-import AppFooter from './components/AppFooter'
+import AppHeader from './src/components/AppHeader'
+import AppMain from './src/components/AppMain'
+import AppFooter from './src/components/AppFooter'
 
 
 function App() {
