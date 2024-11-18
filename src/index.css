@@ -13,6 +13,10 @@ ul {
   list-style: none;
 }
 
+li {
+  margin-top: 1rem;
+}
+
 header,
 footer {
   text-align: center;

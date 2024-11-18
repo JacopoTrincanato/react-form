@@ -15,8 +15,23 @@ export default function Form() {
     function addPostTitle(e) {
         e.preventDefault()
 
+        console.log(initialPosts);
+
+
         setInitialPosts([...initialPosts, newPosts])
         setNewPosts('')
+
+
+    }
+
+    function deleteTitle(e) {
+
+        const deleteTitle = Number(e.target.getAttribute('data-index'))
+
+        const newPost = initialPosts.filter((task, index) => index != deleteTitle)
+
+        setInitialPosts(newPost)
+
     }
 
     //eseguo il return
@@ -24,15 +39,18 @@ export default function Form() {
         <section>
             <form onSubmit={addPostTitle}>
 
-                <input type="text" placeholder="Inserisci il titolo" className={style.placeholder} value={newPosts} />
+                <input type="text" placeholder="Inserisci il titolo" className={style.placeholder} value={newPosts} onChange={e => setNewPosts(e.target.value)} />
 
                 <button className={style.formBtn} type="submit" id="button">INVIA</button>
             </form>
 
-            <ul>
-                {initialPosts.map((post, index) => <li key={index}>{post.title}</li>)}
+            < ul >
+                {initialPosts.map((post, index) => <li key={index}>{post.title}
+                    <button onClick={deleteTitle} data-index={index} className={style.deleteBtn}>cancella</button>
+                </li>)}
 
-            </ul>
+            </ ul>
+
         </section>
     )
 }
