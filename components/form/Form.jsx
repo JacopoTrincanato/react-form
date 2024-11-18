@@ -9,6 +9,7 @@ import posts from "../../data/posts";
 
 //importo le icone di fontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 //creo il componente Form
 export default function Form() {
@@ -49,7 +50,7 @@ export default function Form() {
 
             < ul >
                 {initialPosts.map((post, index) => <li key={index}>{post.title}
-                    <button onClick={deleteTitle} data-index={index} className={style.deleteBtn}>cancella</button>
+                    <button onClick={deleteTitle} data-index={index} className={style.deleteBtn}><FontAwesomeIcon icon={faTrash} /></button>
                 </li>)}
 
             </ ul>
