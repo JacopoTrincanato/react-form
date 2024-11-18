@@ -16,6 +16,7 @@ export default function Form() {
     const [initialPosts, setInitialPosts] = useState(posts)
     const [newPosts, setNewPosts] = useState('')
 
+    //creo una funzione per aggiungere un titolo
     function addPostTitle(e) {
         e.preventDefault()
 
@@ -25,9 +26,9 @@ export default function Form() {
         setInitialPosts([...initialPosts, { title: newPosts }])
         setNewPosts('')
 
-
     }
 
+    //creo una funzione per cancellare un titolo del post
     function deleteTitle(e) {
 
         const deleteTitle = Number(e.target.getAttribute('data-index'))
