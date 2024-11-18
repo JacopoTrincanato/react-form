@@ -1,6 +1,9 @@
 //importo lo useState
 import { useState } from "react";
 
+//importo lo stile
+import style from "./Form.module.css"
+
 //importo i post
 import posts from "../../data/posts";
 
@@ -21,6 +24,9 @@ export default function Form() {
         <section>
             <form onSubmit={addPostTitle}>
 
+                <input type="text" placeholder="Inserisci il titolo" value={newPosts} />
+
+                <button className={style.formBtn} type="submit" id="button">INVIA</button>
             </form>
         </section>
     )

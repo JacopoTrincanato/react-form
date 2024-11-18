@@ -1,6 +1,9 @@
 //importo la card
 import Card from "./card/Card";
 
+//importo il form
+import Form from "./form/Form";
+
 //importo l'array di post
 import posts from "../data/posts";
 
@@ -26,6 +29,8 @@ export default function AppMain() {
     //eseguo il return
     return (
         <main>
+
+            <Form />
 
             {posts.map(post => <Card key={post.id} post={post} />)}
 
