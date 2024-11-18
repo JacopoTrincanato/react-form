@@ -15,13 +15,9 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 export default function Form() {
     const [initialPosts, setInitialPosts] = useState(posts)
     const [newPosts, setNewPosts] = useState('')
-
     //creo una funzione per aggiungere un titolo
     function addPostTitle(e) {
         e.preventDefault()
-
-        console.log(initialPosts);
-
 
         setInitialPosts([...initialPosts, { title: newPosts }])
         setNewPosts('')
@@ -47,6 +43,7 @@ export default function Form() {
                 <input type="text" placeholder="Inserisci il titolo" className={style.placeholder} value={newPosts} onChange={e => setNewPosts(e.target.value)} />
 
                 <button className={style.formBtn} type="submit" id="button">INVIA</button>
+
             </form>
 
             < ul >
@@ -55,12 +52,9 @@ export default function Form() {
                     <button onClick={eliminate} data-index={index} className={style.deleteBtn}><FontAwesomeIcon icon={faTrash} /></button>
                 </li>)}
 
-                <li><h2>Contenuto dei post</h2></li>
-                {initialPosts.map((post, index) => <li className={style.liItem} key={index}>{post.content}
-                    <button onClick={eliminate} data-index={index} className={style.deleteBtn}><FontAwesomeIcon icon={faTrash} /></button>
-                </li>)}
-
             </ ul>
+
+
 
         </section>
     )
