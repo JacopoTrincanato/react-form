@@ -1,8 +1,8 @@
 //importo la card
-import Card from "./card/Card"
+import Card from "./card/Card";
 
 //importo l'array di post
-import posts from "../data/posts"
+import posts from "../data/posts";
 
 //creo il componente main
 export default function AppMain() {
