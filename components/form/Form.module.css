@@ -20,3 +20,9 @@
     width: 500px;
     padding: 0.5rem;
 }
+
+.liItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

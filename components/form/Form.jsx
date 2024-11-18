@@ -29,11 +29,11 @@ export default function Form() {
     }
 
     //creo una funzione per cancellare un titolo del post
-    function deleteTitle(e) {
+    function eliminate(e) {
 
         const deleteTitle = Number(e.target.getAttribute('data-index'))
 
-        const newPost = initialPosts.filter((task, index) => index != deleteTitle)
+        const newPost = initialPosts.filter((post, index) => index != deleteTitle)
 
         setInitialPosts(newPost)
 
@@ -50,8 +50,14 @@ export default function Form() {
             </form>
 
             < ul >
-                {initialPosts.map((post, index) => <li key={index}>{post.title}
-                    <button onClick={deleteTitle} data-index={index} className={style.deleteBtn}><FontAwesomeIcon icon={faTrash} /></button>
+                <li><h2>Titoli dei post</h2></li>
+                {initialPosts.map((post, index) => <li className={style.liItem} key={index}>{post.title}
+                    <button onClick={eliminate} data-index={index} className={style.deleteBtn}><FontAwesomeIcon icon={faTrash} /></button>
+                </li>)}
+
+                <li><h2>Contenuto dei post</h2></li>
+                {initialPosts.map((post, index) => <li className={style.liItem} key={index}>{post.content}
+                    <button onClick={eliminate} data-index={index} className={style.deleteBtn}><FontAwesomeIcon icon={faTrash} /></button>
                 </li>)}
 
             </ ul>
